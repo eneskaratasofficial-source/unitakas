@@ -10,7 +10,7 @@
 **Proje Tanımı:** 
 > 
 
-**Örnek:** unitakas, üniversite öğrencilerinin kendi aralarında güvenli, nakit para akışı olmadan ve tamamen kapalı devre bir ekosistem içerisinde eşya takası yapabilmelerini sağlayan yenilikçi bir web-mobil platformudur. Platformun temel amacı; öğrenci bütçesine destek olmak, sürdürülebilir tüketimi teşvik etmek ve israfı önleyerek kullanılmayan eşyaların kampüs içerisinde yeniden değerlendirilmesini sağlamaktır.
+unitakas, üniversite öğrencilerinin kendi aralarında güvenli, nakit para akışı olmadan ve tamamen kapalı devre bir ekosistem içerisinde eşya takası yapabilmelerini sağlayan yenilikçi bir web-mobil platformudur. Platformun temel amacı; öğrenci bütçesine destek olmak, sürdürülebilir tüketimi teşvik etmek ve israfı önleyerek kullanılmayan eşyaların kampüs içerisinde yeniden değerlendirilmesini sağlamaktır.
 
 Sistemin en temel mimari özelliği "Kredi Tabanlı Takas Sistemi" üzerine kurulmuş olmasıdır. ÜniTakas platformunda herhangi bir itibari para (TL, Dolar vb.) veya banka entegrasyonu (IBAN, kredi kartı vb.) kullanılmaz; bunun yerine platform içi sanal "Kredi"ler geçerlidir. Öğrenciler kullanmadıkları eşyalarını sisteme yükledikçe ve yöneticiler tarafından bu ilanlar onaylandıkça platform kredisi kazanırlar. Sahip oldukları bu kredilerle de diğer öğrencilerin sisteme yüklediği eşyaları "sipariş oluşturabilirler".
 
