@@ -1,3 +1,4 @@
+# Temel Gereksinimler 
 1. **Üye Olma**
    - **API Metodu:** `POST /api/auth/register (ve Doğrulama için: POST /api/auth/verify)`
    - **Açıklama:** Kullanıcıların sisteme kayıt olmasını sağlar.unitakas projesine özel olarak, kayıt işlemleri güvenlik ve kitle kontrolü gereği yalnızca .edu (veya .edu.tr vb.) uzantılı e-posta adresleriyle gerçekleştirilebilir. Kullanıcı sisteme email ve password bilgilerini göndererek hesap oluşturur. Ancak hesap doğrudan aktif olmaz; giriş yapılabilmesi için kullanıcının şimdilik yönetici tarafından onaylanması zorunludur. (Mail veya doğrulama kodu entegresi sağlanarak mail adresine doğrulama kodu gönderilme işlemi de ilerde sağlanabilir kodlara eklenmiştir.)
@@ -13,7 +14,8 @@
 4. **Hesap Silme**
    - **API Metodu:** `DELETE /api/users/{userId}`
    - **Açıklama:** Bir hesabın sistemden kalıcı olarak temizlenmesini sağlar.unitakas yapısına göre bu işlemi yalnızca "admin" rolüne sahip yöneticiler gerçekleştirebilir. Bir hesap silindiğinde arka planda çalışan güvenlik mekanizması sayesinde kullanıcının satışa koyduğu/sahibi olduğu tüm ürünler (owner) tamamen silinir. Daha önceden satın aldığı ürünlerde ise satış geçmişinin bozulmaması adına ürün silinmez, yalnızca o ürünlerdeki "alıcı" (buyer) referansı temizlenir. İşlem geri alınamazdır.
-   # Tüm Gereksinimler 
+
+   
 
 5. **Hesap Doğrulama**
    - **API Metodu:** `POST /api/auth/verify`
@@ -23,6 +25,7 @@
    - **API Metodu:** `POST /api/auth/login`
    - **Açıklama:** Kullanıcıların sisteme giriş yaparak hizmetlere erişmesini sağlar. Doğrulanmış ve onaylanmış email adresi ile şifre eşleştirilerek kimlik doğrulama yapılır. Başarılı giriş sonrası kullanıcıya güvenli erişim tokenı (JWT) verilir.
 
+# Tüm Diğer Gereksinimler 
 
 7. **Sepet Görüntüleme**
    - **API Metodu:** `GET /api/cart`
