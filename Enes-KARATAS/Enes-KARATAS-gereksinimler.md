@@ -1,11 +1,11 @@
 # Temel Gereksinimler 
 1. **Üye Olma**
    - **API Metodu:** `POST /api/auth/register (ve Doğrulama için: POST /api/auth/verify)`
-   - **Açıklama:** Kullanıcıların sisteme kayıt olmasını sağlar.unitakas projesine özel olarak, kayıt işlemleri güvenlik ve kitle kontrolü gereği yalnızca .edu (veya .edu.tr vb.) uzantılı e-posta adresleriyle gerçekleştirilebilir. Kullanıcı sisteme email ve password bilgilerini göndererek hesap oluşturur. Ancak hesap doğrudan aktif olmaz; giriş yapılabilmesi için kullanıcının şimdilik yönetici tarafından onaylanması zorunludur. (Mail veya doğrulama kodu entegresi sağlanarak mail adresine doğrulama kodu gönderilme işlemi de ilerde sağlanabilir kodlara eklenecektir.)
+   - **Açıklama:** Kullanıcıların sisteme kayıt olmasını sağlar. unitakas projesine özel olarak, kayıt işlemleri güvenlik ve kitle kontrolü gereği yalnızca .edu (veya .edu.tr vb.) uzantılı e-posta adresleriyle gerçekleştirilebilir. Kullanıcı sisteme email ve password bilgilerini göndererek hesap oluşturur. Ancak hesap doğrudan aktif olmaz; giriş yapılabilmesi için kullanıcının şimdilik yönetici tarafından onaylanması zorunludur. (Mail veya doğrulama kodu entegresi sağlanarak mail adresine doğrulama kodu gönderilme işlemi de ilerde sağlanabilir kodlara eklenecektir.)
 
 2. **Profil Görüntüleme**
    - **API Metodu:** `GET /api/auth/user (Kendi Profili) ve GET /api/users (Yöneticiler için Tüm Kullanıcılar)`
-   - **Açıklama:** Sisteme giriş yapmış kullanıcıların doğrulanmış token (JWT) aracılığıyla profil bilgilerini görüntülemesini sağlar. Kullanıcılar GET /api/auth/user uç noktası ile kendi ad, soyad, e-posta, kredi miktarı (credits), yetki rolü ve o an sepetinde (cart) bulunan ürünleri detaylı olarak görüntüleyebilir. Yöneticiler (admin) ise diğer kullanıcıları listelemek için GET /api/users üzerinden tüm sisteme erişebilir. Güvenlik için giriş yapmış olmak zorunludur.
+   - **Açıklama:** Sisteme giriş yapmış kullanıcıların doğrulanmış token (JWT) aracılığıyla profil bilgilerini görüntülemesini sağlar. Kullanıcılar GET /api/auth/user uç noktası ile kendi ad, soyad, kredi miktarı (credits) ve o an sepetinde (cart) bulunan ürünleri sepet'e tıklayıp detaylı olarak görüntüleyebilir. Yöneticiler (admin) ise diğer kullanıcıları listelemek için GET /api/users üzerinden tüm sisteme erişebilir. Güvenlik için giriş yapmış olmak zorunludur.
 
 3. **Profil Güncelleme**
    - **API Metodu:** `PUT /api/auth/profile (Kullanıcılar) ve PUT /api/users/{userId} (Yöneticiler)`
@@ -19,7 +19,7 @@
 
 5. **Hesap Doğrulama**
    - **API Metodu:** `POST /api/auth/verify`
-   - **Açıklama:** Kayıt olan kullanıcıların hesaplarını aktif hale getirmesini sağlar. Admin onayına sunulur ve onaylanırsa hesaba giriş yetkisi verilir.(İlerleyen zamanlarda mail ile doğrulama özellikleri için gerekli kodlar eklenecek, şimdilik manuel doğrulama sağlanmaktadır.)
+   - **Açıklama:** Kayıt olan kullanıcıların hesaplarını aktif hale getirmesini sağlar. Admin onayına sunulur ve onaylanırsa hesaba giriş yetkisi verilir.(İlerleyen zamanlarda mail ile doğrulama özellikleri için gerekli kodlar eklenecek şimdilik manuel doğrulama sağlanmaktadır.)
 
 6. **Giriş Yapma**
    - **API Metodu:** `POST /api/auth/login`
@@ -29,7 +29,7 @@
 
 7. **Sepet Görüntüleme**
    - **API Metodu:** `GET /api/cart`
-   - **Açıklama:** Kullanıcının takaslamak için değerlendirdiği ürünleri listelemesini sağlar. Sepetteki aktif öğeler, resimleri ve satıcı bilgileriyle birlikte kullanıcıya sunulur.
+   - **Açıklama:** Kullanıcının takaslamak için değerlendirdiği ürünleri listelemesini sağlar. Sepetteki aktif öğeler, resimleriyle birlikte kullanıcıya sunulur.
 
 8. **Sepete Ürün Ekleme**
    - **API Metodu:** `POST /api/cart/{id}`
@@ -41,7 +41,7 @@
 
 10. **Sepeti Onaylama (Satın Alma)**
    - **API Metodu:** `POST /api/cart/checkout/all`
-   - **Açıklama:** Sepette bekleyen ürün için takas işlemini başlatır. Sistem arka planda kullanıcının kredi yeterliliğini kontrol eder; işlem uygunsa alıcıdan kredi düşülür, satıcının hesabında kredi beklemeye alınır ve ürün durumu "satıldı" olarak işaretlenir.
+   - **Açıklama:** Sepette bekleyen ürün için takas işlemini başlatır. Sistem arka planda kullanıcının kredi yeterliliğini kontrol eder; işlem uygunsa alıcıdan kredi düşülür, satıcının hesabında kredi beklemeye alınır ve ürün durumu "sold" olarak işaretlenir.
 
 11. **Teslimat Onayı**
     - **API Metodu:** `POST /api/products/confirm-delivery/{id}`

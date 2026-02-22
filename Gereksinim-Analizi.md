@@ -15,7 +15,7 @@
 
 4. **Kendi Profilini Görüntüleme**
    - **API Metodu:** `GET /api/auth/user`
-   - **Açıklama:** Sisteme giriş yapmış kullanıcının kendi profil bilgilerini görüntülemesini sağlar. Kişisel tanımlayıcılar, hesap kredisi, yetki rolü ve o an sepetinde bulunan ürünlerin detayları listelenir.
+   - **Açıklama:** Sisteme giriş yapmış kullanıcının kendi profil bilgilerini görüntülemesini sağlar. Kişisel tanımlayıcılar, hesap kredisi ve o an sepetinde bulunan ürünlerin detayları listelenir.
 
 5. **Profil Bilgilerini Güncelleme**
    - **API Metodu:** `PUT /api/auth/profile`
@@ -23,7 +23,7 @@
 
 6. **Sepet Görüntüleme**
    - **API Metodu:** `GET /api/cart`
-   - **Açıklama:** Kullanıcının takaslamak için değerlendirdiği ürünleri listelemesini sağlar. Sepetteki aktif öğeler, resimleri ve satıcı bilgileriyle birlikte kullanıcıya sunulur.
+   - **Açıklama:** Kullanıcının takaslamak için değerlendirdiği ürünleri listelemesini sağlar. Sepetteki aktif öğeler, resimleriyle birlikte kullanıcıya sunulur.
 
 7. **Sepete Ürün Ekleme**
    - **API Metodu:** `POST /api/cart/{id}`
@@ -35,7 +35,7 @@
 
 9. **Sepeti Onaylama (Satın Alma)**
    - **API Metodu:** `POST /api/cart/checkout/all`
-   - **Açıklama:** Sepette bekleyen ürün için takas işlemini başlatır. Sistem arka planda kullanıcının kredi yeterliliğini kontrol eder; işlem uygunsa alıcıdan kredi düşülür, satıcının hesabında kredi beklemeye alınır ve ürün durumu "satıldı" olarak işaretlenir.
+   - **Açıklama:** Sepette bekleyen ürün için takas işlemini başlatır. Sistem arka planda kullanıcının kredi yeterliliğini kontrol eder; işlem uygunsa alıcıdan kredi düşülür, satıcının hesabında kredi beklemeye alınır ve ürün durumu "sold" olarak işaretlenir.
 
 10. **Teslimat Onayı**
     - **API Metodu:** `POST /api/products/confirm-delivery/{id}`
@@ -51,7 +51,7 @@
 
 14. **Yeni Ürün Yükleme**
     - **API Metodu:** `POST /api/products`
-    - **Açıklama:** Kullanıcıların takaslamak istedikleri yeni eşyaları sisteme kaydetmesini sağlar. Görseller ve ürün açıklamaları toplanarak veritabanına eklenir. Yüklenen kayıt, yöneticiler onaylayana kadar bekleyen statüsünde tutulur.
+    - **Açıklama:** Kullanıcıların takaslamak istedikleri yeni eşyaları sisteme kaydetmesini sağlar. Görseller ve ürün açıklamaları toplanarak veritabanına eklenir. Yüklenen kayıt, yöneticiler onaylayana kadar bekleyen "pending" statüsünde tutulur.
 
 15. **Kendi Ürünlerini Görüntüleme**
     - **API Metodu:** `GET /api/products/my-listings`
