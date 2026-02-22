@@ -15,7 +15,7 @@
 
 4. **Kendi Profilini Görüntüleme**
    - **API Metodu:** `GET /api/auth/user`
-   - **Açıklama:** Sisteme giriş yapmış kullanıcının kendi profil bilgilerini görüntülemesini sağlar. Kişisel tanımlayıcılar, hesap kredisi ve o an sepetinde bulunan ürünlerin detayları listelenir.
+   - **Açıklama:** Sisteme giriş yapmış kullanıcının kendi profil bilgilerini "Hesabım" bölümünden görüntülemesini sağlar. Kişisel tanımlayıcılar, hesap kredisi ve o an sepetinde bulunan ürünlerin detaylarını kullanıcı ilgili bölümlere tıklayıp görüntüleyebilir.
 
 5. **Profil Bilgilerini Güncelleme**
    - **API Metodu:** `PUT /api/auth/profile`
