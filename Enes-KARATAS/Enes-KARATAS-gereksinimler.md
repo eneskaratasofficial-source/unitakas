@@ -1,7 +1,7 @@
 # Temel Gereksinimler 
 1. **Üye Olma**
    - **API Metodu:** `POST /api/auth/register (ve Doğrulama için: POST /api/auth/verify)`
-   - **Açıklama:** Kullanıcıların sisteme kayıt olmasını sağlar.unitakas projesine özel olarak, kayıt işlemleri güvenlik ve kitle kontrolü gereği yalnızca .edu (veya .edu.tr vb.) uzantılı e-posta adresleriyle gerçekleştirilebilir. Kullanıcı sisteme email ve password bilgilerini göndererek hesap oluşturur. Ancak hesap doğrudan aktif olmaz; giriş yapılabilmesi için kullanıcının şimdilik yönetici tarafından onaylanması zorunludur. (Mail veya doğrulama kodu entegresi sağlanarak mail adresine doğrulama kodu gönderilme işlemi de ilerde sağlanabilir kodlara eklenmiştir.)
+   - **Açıklama:** Kullanıcıların sisteme kayıt olmasını sağlar.unitakas projesine özel olarak, kayıt işlemleri güvenlik ve kitle kontrolü gereği yalnızca .edu (veya .edu.tr vb.) uzantılı e-posta adresleriyle gerçekleştirilebilir. Kullanıcı sisteme email ve password bilgilerini göndererek hesap oluşturur. Ancak hesap doğrudan aktif olmaz; giriş yapılabilmesi için kullanıcının şimdilik yönetici tarafından onaylanması zorunludur. (Mail veya doğrulama kodu entegresi sağlanarak mail adresine doğrulama kodu gönderilme işlemi de ilerde sağlanabilir kodlara eklenecektir.)
 
 2. **Profil Görüntüleme**
    - **API Metodu:** `GET /api/auth/user (Kendi Profili) ve GET /api/users (Yöneticiler için Tüm Kullanıcılar)`
@@ -19,7 +19,7 @@
 
 5. **Hesap Doğrulama**
    - **API Metodu:** `POST /api/auth/verify`
-   - **Açıklama:** Kayıt olan kullanıcıların hesaplarını aktif hale getirmesini sağlar. Admin onayına sunulur ve onaylanırsa hesaba giriş yetkisi verilir.(İlerleyen zamanlarda mail ile doğrulama özellikleri için gerekli kodlar eklendi, şimdilik manuel doğrualama sağlanmaktadır.)
+   - **Açıklama:** Kayıt olan kullanıcıların hesaplarını aktif hale getirmesini sağlar. Admin onayına sunulur ve onaylanırsa hesaba giriş yetkisi verilir.(İlerleyen zamanlarda mail ile doğrulama özellikleri için gerekli kodlar eklenecek, şimdilik manuel doğrulama sağlanmaktadır.)
 
 6. **Giriş Yapma**
    - **API Metodu:** `POST /api/auth/login`

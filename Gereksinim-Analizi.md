@@ -7,7 +7,7 @@
 
 2. **Hesap Doğrulama**
    - **API Metodu:** `POST /api/auth/verify`
-   - **Açıklama:** Kayıt olan kullanıcıların hesaplarını aktif hale getirmesini sağlar. Admin onayına sunulur ve onaylanırsa hesaba giriş yetkisi verilir.(İlerleyen zamanlarda mail ile doğrulama özellikleri için gerekli kodlar eklendi, şimdilik manuel doğrualama sağlanmaktadır.)
+   - **Açıklama:** Kayıt olan kullanıcıların hesaplarını aktif hale getirmesini sağlar. Admin onayına sunulur ve onaylanırsa hesaba giriş yetkisi verilir.(İlerleyen zamanlarda mail ile doğrulama özellikleri için gerekli kodlar eklenecek şimdilik manuel doğrulama sağlanmaktadır.)
 
 3. **Giriş Yapma**
    - **API Metodu:** `POST /api/auth/login`
